@@ -16,7 +16,7 @@ class PetsController < ApplicationController
       if params["owner"]["name"].empty?
         @pet.owner = Owner.find(params[:pets][:owner_id]).first
       end
-     #binding.pry
+     binding.pry
     redirect to "pets/#{@pet.id}"
   end
 
