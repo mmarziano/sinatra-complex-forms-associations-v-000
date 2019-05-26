@@ -27,7 +27,7 @@ class PetsController < ApplicationController
   patch '/pets/:id' do 
     ####### bug fix
     if !params[:pets].keys.include?("owner_ids")
-    params[:pets]["owners_ids"] = []
+    params[:pets]["owner_ids"] = []
     end
     #######
     binding.pry
