@@ -11,7 +11,7 @@ class PetsController < ApplicationController
   end
 
   post '/pets' do 
-    binding.pry
+    #binding.pry
      @pet = Pet.create(params[:pets])
      owner = Owner.find(params[:pets][:owner_id])
       if !params["owner"]["name"].empty?
